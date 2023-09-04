@@ -3,6 +3,11 @@
   become: yes  # Use sudo to execute commands as root
 
   tasks:
+  - name: Update package cache (Ubuntu)
+    when: ansible_distribution == 'Ubuntu'
+    apt:
+      update_cache: yes
+    changed_when: false
   - name: Install Nginx
     ansible.builtin.package:
       name: nginx
