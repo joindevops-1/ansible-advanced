@@ -1,0 +1,7 @@
+- name: DEMO on functions
+  vars:
+    NAME: Sivakumar Reddy M
+  tasks:
+  - name: print upper case
+    debug:
+    msg: "{{ NAME | upper }}"
