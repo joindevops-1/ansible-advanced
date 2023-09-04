@@ -3,7 +3,7 @@
   vars:
     NAME: Sivakumar Reddy M
     users:
-      name: Sivakumar Reddy M
+    - name: Sivakumar Reddy M
       age: 30
       DOB: 01-01-01
   tasks:
