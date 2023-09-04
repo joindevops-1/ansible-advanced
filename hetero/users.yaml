@@ -1,0 +1,12 @@
+- name: Install Nginx on CentOS and Ubuntu
+  hosts: centos:ubuntu
+  become: yes  # Use sudo to execute commands as root
+
+   tasks:
+    - name: Create User on Ubuntu
+      ansible.builtin.command: adduser sivakumar
+      when: ansible_facts['ansible_distribution'] == 'Ubuntu'
+
+    - name: Create User on CentOS
+      ansible.builtin.command: adduser sivakumar
+      when: ansible_facts['ansible_distribution'] == 'CentOS'
