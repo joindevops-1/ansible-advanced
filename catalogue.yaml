@@ -1,0 +1,15 @@
+- name: Installing Catalogue
+  hosts: mongodb
+  become: yes
+  # tags:
+  # - dev
+  roles:
+  - catalogue
+
+# - name: Installing Catalogue
+#   hosts: mongodb
+#   become: yes
+#   tags:
+#   - prod
+#   roles:
+#   - catalogue
