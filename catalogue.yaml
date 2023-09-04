@@ -1,5 +1,5 @@
 - name: Installing Catalogue
-  hosts: mongodb
+  hosts: catalogue
   become: yes
   # tags:
   # - dev
