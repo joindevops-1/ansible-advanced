@@ -1,0 +1,6 @@
+- name: create EC2 instances
+  tasks:
+  - name: start an instance with a public IP address
+    amazon.aws.ec2_instance:
+      name: "public-compute-instance"
+      image_id: ami-03265a0778a880afb
