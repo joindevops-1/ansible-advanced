@@ -8,5 +8,5 @@
     when: ansible_facts['distribution'] == 'Ubuntu'
 
   - name: Create User on CentOS
-    ansible.builtin.command: adduser sivakumar
+    ansible.builtin.command: useradd sivakumar
     when: ansible_facts['distribution'] == 'CentOS'
