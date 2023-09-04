@@ -29,6 +29,7 @@
 - name: Load Schema
   tags:
   - configuration
+  - db
   ansible.builtin.import_role:
     name: common
     tasks_from: load-mongo-schema
