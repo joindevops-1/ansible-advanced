@@ -1,0 +1,15 @@
+- name: Installing MongoDB
+  hosts: mongodb
+  tags:
+  - dev
+  become: yes
+  roles:
+  - mongodb
+
+- name: Installing MongoDB
+  hosts: mongodb
+  tags:
+  - prod
+  become: yes
+  roles:
+  - mongodb

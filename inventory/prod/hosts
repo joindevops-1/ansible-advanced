@@ -1,6 +1,9 @@
 [mongodb]
 mongodb-prod.joindevops.online
 
+[mongodb:vars]
+component=mongodb
+
 [catalogue]
 catalogue-prod.joindevops.online
 
