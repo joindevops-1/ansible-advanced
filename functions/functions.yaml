@@ -5,4 +5,4 @@
   tasks:
   - name: print upper case
     debug:
-    msg: "{{ NAME | upper }}"
+      msg: "{{ NAME | upper }}"
