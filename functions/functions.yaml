@@ -1,4 +1,5 @@
 - name: DEMO on functions
+  hosts: localhost
   vars:
     NAME: Sivakumar Reddy M
   tasks:
