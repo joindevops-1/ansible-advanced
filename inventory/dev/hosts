@@ -5,7 +5,6 @@ mongodb-dev.joindevops.online
 component=mongodb
 
 [catalogue]
-catalogue-dev.joindevops.online
 catalogue-dev-01.joindevops.online
 catalogue-dev-02.joindevops.online
 catalogue-dev-03.joindevops.online
