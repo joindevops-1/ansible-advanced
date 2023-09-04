@@ -1,0 +1,5 @@
+- name: gather facts
+  hosts: localhost
+  tasks:
+  - name: print
+    setup:
