@@ -6,7 +6,9 @@
   - name: Create User on Ubuntu
     ansible.builtin.command: adduser sivakumar
     when: ansible_facts['distribution'] == 'Ubuntu'
+    ignore_errors: true
 
   - name: Create User on CentOS
     ansible.builtin.command: useradd sivakumar
     when: ansible_facts['distribution'] == 'CentOS'
+    ignore_errors: true
