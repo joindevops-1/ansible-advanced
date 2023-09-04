@@ -5,7 +5,7 @@
 
 - name: Install NodeJS
   tags:
-  - install
+  - configuration
   ansible.builtin.import_role:
     name: common
     tasks_from: nodejs
@@ -13,6 +13,7 @@
 - name: SetUp Application
   tags:
   - deployment
+  - configuration
   ansible.builtin.import_role:
     name: common
     tasks_from: app-setup
@@ -20,13 +21,14 @@
 - name: install dependencies
   tags:
   - deployment
+  - configuration
   ansible.builtin.command: npm install
   args:
     chdir: /app
 
 - name: Load Schema
   tags:
-  - install
+  - configuration
   ansible.builtin.import_role:
     name: common
     tasks_from: load-mongo-schema
@@ -34,6 +36,7 @@
 - name: Start application
   tags:
   - deployment
+  - configuration
   ansible.builtin.import_role:
     name: common
     tasks_from: systemd-setup
