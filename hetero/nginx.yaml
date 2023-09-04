@@ -1,0 +1,9 @@
+- name: Install Nginx on CentOS and Ubuntu
+  hosts: centos:ubuntu
+  become: yes  # Use sudo to execute commands as root
+
+  tasks:
+  - name: Install Nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present  # Ensure Nginx is installed
