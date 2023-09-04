@@ -12,3 +12,8 @@
     ansible.builtin.package:
       name: nginx
       state: present  # Ensure Nginx is installed
+  - name: Start Nginx service
+      systemd:
+        name: nginx
+        state: started
+      when: nginx_install_result.changed
