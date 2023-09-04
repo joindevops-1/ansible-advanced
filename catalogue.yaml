@@ -1,5 +1,7 @@
 - name: Installing Catalogue
   hosts: catalogue
+  vars:
+    component: catalogue
   become: yes
   # tags:
   # - dev
