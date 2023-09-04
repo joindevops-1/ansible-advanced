@@ -2,7 +2,15 @@
   hosts: localhost
   vars:
     NAME: Sivakumar Reddy M
+    users:
+      name: Sivakumar Reddy M
+      age: 30
+      DOB: 01-01-01
   tasks:
   - name: print upper case
     debug:
       msg: "{{ NAME | upper }}"
+
+  - name: get name
+    debug:
+      msg: "{{ users | map(attribute='name') | list }}"
